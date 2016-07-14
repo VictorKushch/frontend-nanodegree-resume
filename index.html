@@ -52,7 +52,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 </head>
 <body>
   <div id="main">
-    Hello world!   <!-- You'll be deleting this line in the course -->
+   <!-- Hello world!  --> <!-- You'll be deleting this line in the course -->
 
     <!--
     Everything from here to the <script> tag below is the skeleton of your
@@ -61,7 +61,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     display by looking at the id or at what's written between the <h2> tags.
     -->
     <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
+      <ul id="topContacts" class="flex-box">
+      </ul>
     </div>
     <div style="clear: both;"></div>
     <div id="workExperience" class="gray">
@@ -113,6 +114,41 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
         an opening and closing set of slash asterisks for block comments.
     */
 
+
+    //$("#main").append("and Victor");
+
+
+
+      if(bio.skills.length > 0) {
+        var FormattedName = HTMLheaderName.replace("%data%", bio.name);
+        var FormattedRole = HTMLheaderRole.replace("%data%", bio.role);
+        $("#header").append(FormattedName);
+        $("#header").append(FormattedRole);
+        $("#header").append(bio.email + " " + bio.phone);
+        $("#header").append(HTMLskillsStart);
+        var FormattedSkills = HTMLskills.replace("%data%", bio.skills[0]);
+        $("#header").append(FormattedSkills);
+        FormattedSkills = HTMLskills.replace("%data%", bio.skills[1]);
+        $("#header").append(FormattedSkills);
+        FormattedSkills = HTMLskills.replace("%data%", bio.skills[2]);
+        $("#header").append(FormattedSkills);
+        //for (var item in bio.skills){
+        //    var skills_stack = [];
+        //    skills_stack.push(bio.skills[item])};
+        //$("#skills").append(skills_stack);
+    //} else {
+    //    console.log("Object is eampty"); // Object is empty (Would return true in this example)
+    //}
+        for (var item in work.work_place){
+            $("#workExperience").append(HTMLworkStart);
+            var FormatedEmployer = HTMLworkEmployer.replace("%data%", work.work_place[item].company);
+            var FormatedTitle = HTMLworkTitle.replace("%data%", work.work_place[item].title);
+            $(".work-entry:last").append(FormatedEmployer + FormatedTitle);
+        };
+      };
+
+    //thoughts = thoughts.replace("awesome", "cool")
+    //$("#main").append(thoughts);
 
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('topContacts').style.display = 'none';
