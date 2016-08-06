@@ -14,8 +14,7 @@ var bio = {
         },
         biopic : "https://media.licdn.com/mpr/mpr/shrink_200_200/p/3/005/059/0f2/2c5537d.jpg",
         welcome_message : "Ready to change your online business outlook",
-        skills : ["JS",  "Angular", "HTML", "CSS", "Boottstrap"],
-        display: function(){}
+        skills : ["JS",  "Angular", "HTML", "CSS", "Boottstrap"]
     };
 var education = {
         "shools" : [
@@ -112,8 +111,7 @@ var projects = {
 }
 
 //BIO
-
-function displayWork(){
+bio.display = function(){
 
       var FormatedPictureBlock = HTMLbioPic.replace("%data%", bio.biopic);
       var FormattedName = HTMLheaderName.replace("%data%", intName(bio.name));
@@ -140,9 +138,13 @@ function displayWork(){
         $("#header").append(FormattedSkills);
     };
 
+};
+
+bio.display();
+
 
   //WORK EXPERIENCE
-
+work.display = function(){
   if (work.work_place.length > 0){
       for (var item in work.work_place){
           $("#workExperience").append(HTMLworkStart);
@@ -158,10 +160,12 @@ function displayWork(){
     };
 
   };
+};
 
+work.display();
 
   //Projects
-  projects.display = function(){
+projects.display = function(){
       if (projects.project.length > 0){
           $("#projects").append(HTMLprojectStart);
           for (var item in projects.project){
@@ -182,9 +186,12 @@ function displayWork(){
 
       };
   };
-  projects.display();
-  //Education
-  if (education.shools.length > 0){
+projects.display();
+
+//Education
+
+education.display = function(){
+    if (education.shools.length > 0){
     $("#education").append(HTMLschoolStart);
       for (item in education.shools){
           console.log(education.shools[item].name);
@@ -199,12 +206,12 @@ function displayWork(){
             };
       };
   };
+};
+
+education.display;
 
      $("#mapDiv").append(googleMap);
 
-};
-
-displayWork();
 
 //Where I lieved
 
