@@ -1,19 +1,21 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
 */
-var test = {};
 
 var bio = {
         name : "Victor Kushch",
         role : "Front End Developer",
-        email : "victor@ku-64.com",
-        phone : "617-678-7490",
-        linkedin : "https://www.linkedin.com/in/viktar-kushch-4491a483",
-        current_location : "Boston",
-        github : "https://github.com/VictorKushch",
-        picture_url : "https://media.licdn.com/mpr/mpr/shrink_200_200/p/3/005/059/0f2/2c5537d.jpg",
+        contacts : {
+            mobile : "617-678-7490",
+            email : "victor@ku-64.com",
+            github : "https://github.com/VictorKushch",
+            linkedin : "https://www.linkedin.com/in/viktar-kushch-4491a483",
+            current_location : "Boston"
+        },
+        biopic : "https://media.licdn.com/mpr/mpr/shrink_200_200/p/3/005/059/0f2/2c5537d.jpg",
         welcome_message : "Ready to change your online business outlook",
-        skills : ["JS",  "Angular", "HTML", "CSS", "Boottstrap"]
+        skills : ["JS",  "Angular", "HTML", "CSS", "Boottstrap"],
+        display: function(){}
     };
 var education = {
         "shools" : [
@@ -108,3 +110,130 @@ var projects = {
 
     ]
 }
+
+//BIO
+
+function displayWork(){
+
+      var FormatedPictureBlock = HTMLbioPic.replace("%data%", bio.biopic);
+      var FormattedName = HTMLheaderName.replace("%data%", intName(bio.name));
+      var FormattedRole = HTMLheaderRole.replace("%data%", bio.role);
+      var FormattedIntro = HTMLwelcomeMsg.replace("%data%", bio.welcome_message)
+      $("#header").prepend(FormattedName + FormattedRole + FormattedIntro);
+      $("#header").append( FormatedPictureBlock);
+
+      var FormattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+      var FormattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+      var FormatedLinkedIn = HTMLlinkedin.replace("%data%", bio.contacts.linkedin);
+      var Formatedgithub = HTMLgithub.replace("%data%", bio.contacts.github);
+      var FormatedLocation = HTMLlocation.replace("%data%", bio.contacts.current_location)
+
+      var id_strings = ['#topContacts', '#footerContacts'];
+      for (var item = 0; item < id_strings.length; item++){
+          $(id_strings[item]).append(FormattedMobile + FormattedEmail + FormatedLinkedIn + FormatedLocation + Formatedgithub);
+      };
+
+
+    $("#header").append(HTMLskillsStart);
+    for (var item in bio.skills){
+        var FormattedSkills = HTMLskills.replace("%data%", bio.skills[item]);
+        $("#header").append(FormattedSkills);
+    };
+
+
+  //WORK EXPERIENCE
+
+  if (work.work_place.length > 0){
+      for (var item in work.work_place){
+          $("#workExperience").append(HTMLworkStart);
+          var FormatedEmployer = HTMLworkEmployer.replace("%data%", work.work_place[item].company);
+          var FormatedTitle = HTMLworkTitle.replace("%data%", work.work_place[item].title);
+          var from_to = work.work_place[item].from + " - " + work.work_place[item].to;
+          var FormatedFromTo = HTMLworkDates.replace("%data%", from_to);
+          var FormatedLocation = HTMLworkLocation.replace("%data%", work.work_place[item].location);
+          var FormatedDescription = HTMLworkDescription.replace("%data%", work.work_place[item].experience);
+          $(".work-entry:last").append(FormatedEmployer + FormatedTitle + FormatedFromTo + FormatedLocation + FormatedDescription);
+
+
+    };
+
+  };
+
+
+  //Projects
+  projects.display = function(){
+      if (projects.project.length > 0){
+          $("#projects").append(HTMLprojectStart);
+          for (var item in projects.project){
+
+              var FormatedProjectTitle = HTMLprojectTitle.replace("%data%", projects.project[item].title);
+              $(".project-entry:last").append(FormatedProjectTitle);
+              var FormatedProjectDates = HTMLprojectDates.replace("%data%", projects.project[item].dates);
+              $(".project-entry:last").append(FormatedProjectDates);
+              var FormatedProjectDescription = HTMLprojectDescription.replace("%data%", projects.project[item].description);
+              $(".project-entry:last").append(FormatedProjectDescription);
+              for (var image in projects.project[item].images){
+                var FormatedProjectImage = HTMLprojectImage.replace("%data%", projects.project[item].images[image]);
+                $(".project-entry:last").append(FormatedProjectImage);
+              };
+              // $("#projects").append(FormatedProjectTitle + FormatedProjectDates + FormatedProjectDescription +
+              //               FormatedProjectImage);
+          };
+
+      };
+  };
+  projects.display();
+  //Education
+  if (education.shools.length > 0){
+    $("#education").append(HTMLschoolStart);
+      for (item in education.shools){
+          console.log(education.shools[item].name);
+          var FormatedEducationName = HTMLschoolName.replace("%data%", education.shools[item].name);
+          var FormatedEducationDegree = HTMLschoolDegree.replace("%data%", education.shools[item].degree);
+          var FormatedEducationDates = HTMLschoolDates.replace("%data%", education.shools[item].dates);
+          var FormatedEducationLocation = HTMLschoolLocation.replace("%data%", education.shools[item].city);
+          $(".education-entry:last").append(FormatedEducationName + FormatedEducationDegree + FormatedEducationDates + FormatedEducationLocation);
+          for (major_item in education.shools[item].major){
+            var FormatedEducationMajor = HTMLschoolMajor.replace("%data%", education.shools[item].major[major_item]);
+            $(".education-entry:last").append(FormatedEducationMajor);
+            };
+      };
+  };
+
+     $("#mapDiv").append(googleMap);
+
+};
+
+displayWork();
+
+//Where I lieved
+
+
+
+
+
+if(document.getElementsByClassName('flex-item').length === 0) {
+document.getElementById('topContacts').style.display = 'none';
+}
+if(document.getElementsByTagName('h1').length === 0) {
+document.getElementById('header').style.display = 'none';
+}
+if(document.getElementsByClassName('work-entry').length === 0) {
+document.getElementById('workExperience').style.display = 'none';
+}
+if(document.getElementsByClassName('project-entry').length === 0) {
+document.getElementById('projects').style.display = 'none';
+}
+if(document.getElementsByClassName('education-entry').length === 0) {
+document.getElementById('education').style.display = 'none';
+}
+if(document.getElementsByClassName('flex-item').length === 0) {
+document.getElementById('lets-connect').style.display = 'none';
+}
+if(document.getElementById('map') === null) {
+document.getElementById('mapDiv').style.display = 'none';
+}
+
+
+
+

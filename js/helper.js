@@ -83,6 +83,14 @@ $(document).ready(function() {
   });
 });
 
+function intName(name){
+  var temp = name.trim().split(" ");
+  var out = temp[0] + " " + temp[1].toUpperCase();
+  return(out);
+};
+
+
+
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
 */
