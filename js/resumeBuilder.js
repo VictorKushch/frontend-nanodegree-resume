@@ -18,19 +18,20 @@ var bio = {
 var education = {
         "shools" : [
             {
-                "name" : "MTI",
-                "city" : "Mogilev, BY",
-                "degree" : "Master",
-                "major" : ["Processing, Automation"],
-                "dates" : "1997 - 2002"
-            },
-            {
                 "name" : "Udacity Nanodegree",
                 "city" : "Boston",
                 "degree" : "Nanodegree",
                 "major" : ["Frontend"],
                 "dates" : "2016"
+            },
+            {
+                "name" : "MTI",
+                "city" : "Mogilev, BY",
+                "degree" : "Master",
+                "major" : ["Processing, Automation"],
+                "dates" : "1997 - 2002"
             }
+
         ]
 
 
