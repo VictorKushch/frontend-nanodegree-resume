@@ -168,6 +168,14 @@ span {
   text-align: center;
 }
 
+.column_1_6 {
+    width: 20%;
+}
+
+.header_a {
+    display: inline;
+}
+
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {

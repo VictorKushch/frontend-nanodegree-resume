@@ -8,9 +8,12 @@ var bio = {
         role : "Front End Developer",
         email : "victor@ku-64.com",
         phone : "617-678-7490",
-        picture_url : "https://www.dropbox.com/s/lgvviu9qytpxw0j/2c5537d.jpg?dl=0",
+        linkedin : "https://www.linkedin.com/in/viktar-kushch-4491a483",
+        current_location : "Boston",
+        github : "https://github.com/VictorKushch",
+        picture_url : "https://media.licdn.com/mpr/mpr/shrink_200_200/p/3/005/059/0f2/2c5537d.jpg",
         welcome_message : "Ready to change your online business outlook",
-        skills : ["JS", "JSON", "Angular", "Python", "HTML", "CSS", "Boottstrap"]
+        skills : ["JS",  "Angular", "HTML", "CSS", "Boottstrap"]
     };
 var education = {
         "shools" : [
@@ -18,13 +21,15 @@ var education = {
                 "name" : "MTI",
                 "city" : "Mogilev, BY",
                 "degree" : "Master",
-                "major" : ["Processing, Automation"]
+                "major" : ["Processing, Automation"],
+                "dates" : "1997 - 2002"
             },
             {
                 "name" : "Udacity Nanodegree",
                 "city" : "Boston",
                 "degree" : "Nanodegree",
-                "major" : ["Frontend"]
+                "major" : ["Frontend"],
+                "dates" : "2016"
             }
         ]
 
@@ -38,7 +43,7 @@ var work = {
           "from" : "09/01/2014",
           "to" : "current",
           "experience" : "Developing Mmech, variety front end and back end projcts",
-          "scills" : ["JavaScript", "JSON", "Angular", "HTML", "CSS", "Python"]
+          "location" : "Auburndale, MA"
         },
         {
           "company" : "Empow Studio",
@@ -46,7 +51,7 @@ var work = {
           "from" : "05/01/2016",
           "to" : "current",
           "experience" : "Developing student app, corporate WP site",
-          "scills" : ["JavaScript", "JSON", "Angular", "HTML", "CSS", "Python"]
+          "location" : "Lexington, MA"
         },
 
         {
@@ -55,7 +60,7 @@ var work = {
           "from" : "09/01/2013",
           "to" : "09/01/2014",
           "experience" : "Range of scripts for tax oreparation company for batch processing",
-          "scills" : ["JavaScript", "JSON", "Angular", "HTML", "CSS", "Python"]
+          "location" : "Newton, MA"
         },
 
         {
@@ -64,7 +69,7 @@ var work = {
           "from" : "01/01/2006",
           "to" : "06/01/2016",
           "experience" : "Front end developer in web dewelopment agency",
-          "scills" : ["JavaScript", "JSON", "Angular", "HTML", "CSS", "Python", "Photoshop", "Indesign"]
+          "location" : "St. Petersburg"
         }
     ]
 }
@@ -74,29 +79,29 @@ var projects = {
         {
           "title" : "Empow Studio App",
           "dates" : "2016",
-          "technology" : ["Html", "Css", "JS", "Bootstrap"],
-          "images" : ["http://image.jpg", "http://image2.jpg"]
+          "description" : "JS and JSON based online App using Large Google Drive aasets in education",
+          "images" : ["http://placekitten.com/300/200", "http://placekitten.com/400/200"]
         },
 
         {
-          "name" : "Casio gift reseller",
+          "title" : "Casio gift reseller",
           "dates" : "2016",
-          "technology" : ["Html", "Css"],
-          "images" : ["http://image3.jpg", "http://image4.jpg"]
+          "description" : "Html, JS landing page",
+          "images" : ["http://placekitten.com/350/200", "http://placekitten.com/430/200"]
         },
 
         {
-          "name" : "GA100 Casio Landing page",
+          "title" : "GA100 Casio Landing page",
           "dates" : "2016",
-          "technology" : ["Html", "Css"],
-          "images" : ["http://image4.jpg", "http://image5.jpg"]
+          "description" : "Html, JS landing page",
+          "images" : ["http://placekitten.com/340/200", "http://placekitten.com/410/200"]
         },
 
         {
-          "name" : "Casio gift reseller",
+          "title" : "Casio gift reseller",
           "dates" : "2016",
-          "technology" : ["Html", "Css"],
-          "images" : ["http://image6.jpg", "http://image7.jpg"]
+          "description" : "Html, JS landing page",
+          "images" : ["http://placekitten.com/310/200", "http://placekitten.com/420/200"]
         },
 
 
