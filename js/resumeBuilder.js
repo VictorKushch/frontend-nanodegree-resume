@@ -50,7 +50,7 @@ var work = {
           "title" : "developer",
           "from" : "09/01/2014",
           "to" : "current",
-          "experience" : "Developing Mmech, variety front end and back end projcts",
+          "experience" : "Developing marketmech.com, variety front end and back end projcts",
           "location" : "Auburndale, MA"
         },
         {
@@ -76,7 +76,7 @@ var work = {
           "title" : "developer",
           "from" : "01/01/2006",
           "to" : "06/01/2016",
-          "experience" : "Front end developer in web dewelopment agency",
+          "experience" : "Developer in web dewelopment agency",
           "location" : "St. Petersburg"
         }
     ]
@@ -87,31 +87,23 @@ var projects = {
         {
           "title" : "Empow Studio App",
           "dates" : "2016",
-          "description" : "JS and JSON based online App using Large Google Drive aasets in education",
-          "images" : ["http://placekitten.com/300/200", "http://placekitten.com/400/200"]
+          "description" : "JS and JSON based online App using Large Google Drive aasets in education area",
+          "images" : ["images/empow1.png", "images/empow2.png"]
         },
 
         {
           "title" : "Casio gift reseller",
           "dates" : "2016",
           "description" : "Html, JS landing page",
-          "images" : ["http://placekitten.com/350/200", "http://placekitten.com/430/200"]
+          "images" : ["images/corporate-1.png", "images/corporate-2.png"]
         },
 
         {
-          "title" : "GA100 Casio Landing page",
+          "title" : "Clever IT System WP theme",
           "dates" : "2016",
-          "description" : "Html, JS landing page",
-          "images" : ["http://placekitten.com/340/200", "http://placekitten.com/410/200"]
-        },
-
-        {
-          "title" : "Casio gift reseller",
-          "dates" : "2016",
-          "description" : "Html, JS landing page",
-          "images" : ["http://placekitten.com/310/200", "http://placekitten.com/420/200"]
-        },
-
+          "description" : "Html, JS",
+          "images" : ["images/it-sys-1.png", "images/it-sys-2.png"]
+        }
 
     ]
 }
@@ -141,7 +133,7 @@ bio.display = function(){
     $("#header").append(HTMLskillsStart);
     for (var item in bio.skills){
         var FormattedSkills = HTMLskills.replace("%data%", bio.skills[item]);
-        $("#header").append(FormattedSkills);
+        $("#skills").append(FormattedSkills);
     };
 
 };
