@@ -17,7 +17,7 @@ var bio = {
         skills : ["JS",  "Angular", "HTML", "CSS", "Boottstrap"]
     };
 var education = {
-        "shools" : [
+        "schools" : [
             {
                 "name" : "Udacity Nanodegree",
                 "city" : "Boston",
@@ -27,15 +27,21 @@ var education = {
             },
             {
                 "name" : "MTI",
-                "city" : "Mogilev, BY",
+                "city" : "Mogilev",
                 "degree" : "Master",
                 "major" : ["Processing, Automation"],
                 "dates" : "1997 - 2002"
             }
 
-        ]
-
-
+        ],
+       "onlineCourses" : [
+           {
+               "title" : "string",
+               "school" : "string",
+               "dates" : "2013-2014",
+               "url" : "udacity"
+            }
+       ]
     }
 var work = {
     "work_place" : [
@@ -191,17 +197,17 @@ projects.display();
 //Education
 
 education.display = function(){
-    if (education.shools.length > 0){
+    if (education.schools.length > 0){
     $("#education").append(HTMLschoolStart);
-      for (item in education.shools){
-          console.log(education.shools[item].name);
-          var FormatedEducationName = HTMLschoolName.replace("%data%", education.shools[item].name);
-          var FormatedEducationDegree = HTMLschoolDegree.replace("%data%", education.shools[item].degree);
-          var FormatedEducationDates = HTMLschoolDates.replace("%data%", education.shools[item].dates);
-          var FormatedEducationLocation = HTMLschoolLocation.replace("%data%", education.shools[item].city);
+      for (item in education.schools){
+          console.log(education.schools[item].name);
+          var FormatedEducationName = HTMLschoolName.replace("%data%", education.schools[item].name);
+          var FormatedEducationDegree = HTMLschoolDegree.replace("%data%", education.schools[item].degree);
+          var FormatedEducationDates = HTMLschoolDates.replace("%data%", education.schools[item].dates);
+          var FormatedEducationLocation = HTMLschoolLocation.replace("%data%", education.schools[item].city);
           $(".education-entry:last").append(FormatedEducationName + FormatedEducationDegree + FormatedEducationDates + FormatedEducationLocation);
-          for (major_item in education.shools[item].major){
-            var FormatedEducationMajor = HTMLschoolMajor.replace("%data%", education.shools[item].major[major_item]);
+          for (major_item in education.schools[item].major){
+            var FormatedEducationMajor = HTMLschoolMajor.replace("%data%", education.schools[item].major[major_item]);
             $(".education-entry:last").append(FormatedEducationMajor);
             };
       };
