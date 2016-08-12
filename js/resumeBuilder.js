@@ -158,7 +158,7 @@ portfolio.display = function() {
 			var formatedProjectDates = HTMLprojectDates.replace("%data%", portfolio.projects[item].dates);
 			$(".project-entry:last").append(formatedProjectDates);
 			var formatedprojectsDescription = HTMLprojectDescription.replace("%data%", portfolio.projects[item].description);
-			$(".project-entry:last").append(FormatedProjectDescription);
+			$(".project-entry:last").append(formatedprojectsDescription);
 			for (var image in portfolio.projects[item].images) {
 				var formatedProjectImage = HTMLprojectImage.replace("%data%", portfolio.projects[item].images[image]);
 				$(".project-entry:last").append(formatedProjectImage);
