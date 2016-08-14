@@ -26,7 +26,7 @@ var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</sp
 var HTMLlinkedin = '<li class="flex-item"><span class="orange-text">linkedin</span><span class="white-text">' +
                    '<a class="header_a" href="https://www.linkedin.com/in/%data%%linkedInID%" target="_blank">%data%</a> </span></li>';
 var HTMLgithub = '<li class="flex-item"><span class="orange-text">Github</span><span class="white-text">' +
-                   '<a class="header_a" href="https://github.com/%data%" target="_blank">%data%</a></span></li>';
+                   '<a class="header_a" href="%data%" target="_blank">%data%</a></span></li>';
 
 
 

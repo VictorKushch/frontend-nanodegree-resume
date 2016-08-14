@@ -111,7 +111,10 @@ bio.display = function() {
 
 	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-	var formatedLinkedIn = HTMLlinkedin.replace("%data%", bio.contacts.linkedin).replace("%linkedInID%", bio.contacts.linkedinID);
+	var formatedLinkedIn = HTMLlinkedin.replace("%data%", bio.contacts.linkedin)
+                                        .replace("%linkedInID%", bio.contacts.linkedinID)
+                                        .replace("%data%", bio.contacts.linkedin);
+    console.log(formatedLinkedIn);
     var formatedgithub = HTMLgithub.replace("%data%", bio.contacts.github).replace("%data%", bio.contacts.github);
     var formatedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
