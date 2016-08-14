@@ -2,15 +2,15 @@
 This is empty on purpose! Your code to build the resume will go here.
 */
 var bio = {
-	name: "Victor Kushch",
-	role: "Front End Developer",
-	contacts: {
-		mobile: "617-678-7490",
-		email: "victor@ku-64.com",
-		github: "https://github.com/VictorKushch",
-        linkedin: "viktar-kushch",
-        linkedinID: "-4491a483",
-		location: "Boston"
+	"name": "Victor Kushch",
+	"role": "Front End Developer",
+	"contacts": {
+		"mobile": "617-678-7490",
+		"email": "victor@ku-64.com",
+		"github": "https://github.com/VictorKushch",
+        "linkedin": "viktar-kushch",
+        "linkedinID": "-4491a483",
+		"location": "Boston"
 	},
 	biopic: "https://media.licdn.com/mpr/mpr/shrink_200_200/p/3/005/059/0f2/2c5537d.jpg",
 	welcomeMessage: "Ready to change your online business outlook",
