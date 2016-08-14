@@ -22,21 +22,23 @@ var education = {
 			"location": "Boston",
 			"degree": "Nanodegree",
 			"majors": ["Frontend"],
-			"dates": "2016"
+			"dates": "2016",
+            "url": "http://udacity.com"
 		}, {
 			"name": "MTI",
 			"location": "Mogilev",
 			"degree": "Master",
 			"majors": ["Processing, Automation"],
-			"dates": "1997 - 2002"
+			"dates": "1997 - 2002",
+            "url": "http://www.mgup.by/"
 		}
 
 	],
 	"onlineCourses": [{
-		"title": "string",
+		"title": "Code Academy",
 		"school": "string",
-		"dates": "2013-2014",
-		"url": "udacity"
+		"dates": "2013-2016",
+		"url": "https://www.codecademy.com/"
 	}]
 };
 var work = {
