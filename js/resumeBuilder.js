@@ -35,8 +35,8 @@ var education = {
 
 	],
 	"onlineCourses": [{
-		"title": "Code Academy",
-		"school": "string",
+		"title": "Python, Angular.JS, JavaScript",
+		"school": "Code Academy",
 		"dates": "2013-2016",
 		"url": "https://www.codecademy.com/"
 	}]
@@ -73,6 +73,7 @@ var work = {
 		}
 	]
 };
+
 
 var portfolio = {
 	"projects": [{
@@ -193,6 +194,16 @@ education.display = function() {
 			});
 		});
 	}
+    if (education.onlineCourses.length > 0) {
+        $(".education-entry:last").append(HTMLonlineClasses);
+        education.onlineCourses.forEach(function(course){
+            var formatedOnlineTitle = HTMLonlineTitle.replace("%data%", course.title);
+            var formatedOnlineSchool = HTMLonlineSchool.replace("%data%", course.school);
+            var formatedOnlineDates = HTMLonlineDates.replace("%data%", course.dates);
+            var formatedOnlineURL = HTMLonlineURL.replace("%data%", course.url);
+            $(".education-entry:last").append(formatedOnlineTitle + formatedOnlineSchool + formatedOnlineDates + formatedOnlineURL);
+        });
+    }
 };
 
 education.display();
