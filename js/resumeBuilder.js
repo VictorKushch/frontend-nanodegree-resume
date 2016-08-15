@@ -75,7 +75,7 @@ var work = {
 };
 
 
-var portfolio = {
+var projects = {
 	"projects": [{
 			"title": "Empow Studio App",
 			"dates": "2016",
@@ -155,10 +155,10 @@ work.display = function() {
 work.display();
 
 //Projects
-portfolio.display = function() {
-	if (portfolio.projects.length > 0) {
+projects.display = function() {
+	if (projects.projects.length > 0) {
 
-		portfolio.projects.forEach(function(project) {
+		projects.projects.forEach(function(project) {
             $("#projects").append(HTMLprojectStart);
 			var formatedProjectTitle = HTMLprojectTitle.replace("%data%", project.title);
 			$(".project-entry:last").append(formatedProjectTitle);
@@ -174,7 +174,7 @@ portfolio.display = function() {
 
 	}
 };
-portfolio.display();
+projects.display();
 
 //Education
 
